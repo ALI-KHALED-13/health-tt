@@ -1,0 +1,28 @@
+{
+  "name": "health-tt",
+  "version": "1.0.0",
+  "description": "test task MERN",
+  "license": "ISC",
+  "author": "Ali Khaled",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -w",
+    "prestart": "tsc",
+    "start": "node .",
+    "start:dev": "tsc && nodemon .",
+    "dev": "concurrently --kill-others \"npm run watch\" \"npm run start:dev\"",
+    "client": "npm run dev --prefix client",
+    "prebuild": "npm install typescript",
+    "build": "npm run build --prefix client"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3"
+  }
+}
