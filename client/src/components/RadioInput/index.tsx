@@ -15,7 +15,6 @@ const RadioInput =({
   onClick,
   disabled,
   className,
-  children,
   style
 }:IRadioInputProps)=>{
 
@@ -38,7 +37,6 @@ const RadioInput =({
       {option.display}
     </StyledOptionLabel>
 
-    {children} {/* used in exceptional cases only, ideally we should have a unified style (without children) */}
   </StyledOption>
  );
   

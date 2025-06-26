@@ -7,14 +7,14 @@ import type { IStyledInputProps } from "./types";
 
 export const StyledLabel = styled.label`
   width: 100%;
-  margin-bottom: 0.3rem;
+  margin: 0.5rem 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-transform: capitalize;
   font-style: italic;
-  color: ${({theme})=> theme.darkGray};
+  color: ${({theme})=> theme.whisperingFrost};
 `;
 
 export const StyledInputContainer = styled.div<IStyledInputProps>`
@@ -32,9 +32,9 @@ export const StyledInputContainer = styled.div<IStyledInputProps>`
       padding: 0rem 0.8rem;
     `
   }
-
+  font-size: 1.8rem;
   color: ${({theme}) => theme.darkGray};
-  border-radius: 1.2rem;
+  border-radius: 1rem;
 
   &:focus-within {
     border: 1px solid ${({theme, readOnly}) => readOnly? "transparent": theme.blue};

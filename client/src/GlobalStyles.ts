@@ -52,6 +52,7 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     display: grid;
     place-items: center;
+    padding: 1.5rem;
   }
 
   a {
@@ -68,23 +69,15 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.1;
   }
 
-  button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s;
+  form {
+    margin: 2rem 0;
   }
-  button:hover {
-    border-color: #646cff;
-  }
-  button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+  form > * {
+    margin: 1rem 0;
+  } 
+  fieldset {
+    padding: 1rem;
+    border-radius: 1rem;
   }
 
   @media (prefers-color-scheme: light) {
@@ -95,9 +88,7 @@ const GlobalStyles = createGlobalStyle`
     a:hover {
       color: #747bff;
     }
-    button {
-      background-color: #f9f9f9;
-    }
+
   }
 `;
 

@@ -59,7 +59,10 @@ export const StyledRadioInputFill = styled.span`
 
 
 export const StyledOptionLabel = styled.p<IStyledRadioProps>`
-  color: ${( {disabled, theme, $isSelected} )=> theme[disabled ? "gray" : $isSelected? "whisperingFrost": "darkGraphite"]};
+  color: ${( {disabled, theme, $isSelected} )=> theme[disabled ? "gray" : $isSelected? "whisperingFrost": "lightGray"]};
   font-weight: ${( {$isSelected} )=> $isSelected && "bold"};
   font-size: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 `;

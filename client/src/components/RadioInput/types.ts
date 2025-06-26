@@ -5,7 +5,6 @@ export interface IRadioInputProps {
   onClick: (clickedOp:IOption)=> void;
   disabled?: boolean;
   value?: IOption;
-  children?: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
 }

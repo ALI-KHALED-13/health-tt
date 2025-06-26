@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 
-app.post("/api/checkin", (req, res)=> {
+app.post("/api/checkin", (req, res)=> { // you may protect with a header secret but keep it simple
   const  { mood, energy, notes } = req.body as {
     notes: string;
     energy: number;
