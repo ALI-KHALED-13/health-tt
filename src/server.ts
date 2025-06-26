@@ -51,7 +51,7 @@ app.post("/api/checkin", (req, res)=> { // you may protect with a header secret 
   } else if (energy < 6){
     suggesstions.push("Do more tasks today.")
   } else {
-    suggesstions.push("Energy is herre to be used.")
+    suggesstions.push("Energy is made to be used.")
   }
   console.log({notes}) // AI would benefit more from it;
 

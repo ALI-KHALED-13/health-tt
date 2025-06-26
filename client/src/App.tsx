@@ -90,7 +90,7 @@ function App() {
       </form>
       
       {data && (
-        <p style={{color: colors.seafoamGreen, fontSize: '2rem'}}>
+        <p style={{color: colors.seafoamGreen, fontSize: '1.8rem'}}>
           {data.suggesstions.join(". ")}
         </p>
       )}

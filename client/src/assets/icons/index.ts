@@ -1,6 +1,6 @@
 import {
   XIcon,
-  ListIcon,
+
   CheckIcon,
   SmileyIcon,
   SmileyWinkIcon,
@@ -12,7 +12,6 @@ import {
 
 export {
   XIcon,
-  ListIcon,
   CheckIcon,
   SmileyIcon,
   SmileyWinkIcon,
