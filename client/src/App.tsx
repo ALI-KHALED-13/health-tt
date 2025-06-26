@@ -9,6 +9,9 @@ import { TextInput } from './components/TextInput'
 import { useAsyncFunc } from './hooks/useAsync'
 import Button from './components/Button'
 import { checkinDailyHealth } from './services'
+import SliderInput from './components/SliderInput'
+
+const energyLevels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(val=> ({value: val + '', display: val + 1}))
 
 const moods = [
   {value: "upset", display: <><SmileyAngryIcon size={32} weight='fill' color={colors.lightRed}/> Upset</>},
@@ -19,10 +22,11 @@ const moods = [
 ];
 
 
+
 function App() {
   const [chosenMood, setChosenMood] = useState<IOption>();
   const [notes, setNotes] = useState('');
-  const [energy/* , setEnergy */] = useState<number>(0);
+  const [energy, setEnergy ] = useState<IOption>();
 
   const [checkin, {isLoading, error, data}] = useAsyncFunc(checkinDailyHealth)
 
@@ -33,7 +37,7 @@ function App() {
     }
     checkin({
       mood: chosenMood.value as "upset" | "down" | "normal" | "good" | "happy",
-      energy: energy,
+      energy: +energy.value,
       notes
     })
   }
@@ -66,6 +70,14 @@ function App() {
               />
             ))}
           </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Set your energy level</legend>
+          <SliderInput
+            steps={energyLevels}
+            value={energy}
+            onChange={(selectedStep)=> setEnergy(selectedStep)}
+          />
         </fieldset>
         <TextInput
           value={notes}

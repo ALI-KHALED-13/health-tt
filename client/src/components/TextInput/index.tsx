@@ -21,7 +21,7 @@ export const TextInput = forwardRef(({
   id,
   name,
   readOnly,
-  required = true,
+  required = false,
   error,
   isTextarea = false,
   rows,

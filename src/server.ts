@@ -47,11 +47,11 @@ app.post("/api/checkin", (req, res)=> { // you may protect with a header secret 
   }
 
   if (energy < 2){
-    suggesstions.push("A bit of movement increases energy")
+    suggesstions.push("A bit of movement increases energy.")
   } else if (energy < 6){
-    suggesstions.push("Do more tasks today")
+    suggesstions.push("Do more tasks today.")
   } else {
-    suggesstions.push("Energy is herre to be used")
+    suggesstions.push("Energy is herre to be used.")
   }
   console.log({notes}) // AI would benefit more from it;
 
@@ -59,9 +59,9 @@ app.post("/api/checkin", (req, res)=> { // you may protect with a header secret 
 
 })
 
-/* app.get("/*", (_req, res)=> {
+app.get("/", (_req, res)=> {
   res.sendFile(path.join(__dirname, '../client/index.html'));
-}) */
+})
 
 const PORT = process.env.PORT || 3000;
 
