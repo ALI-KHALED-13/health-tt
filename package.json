@@ -15,6 +15,10 @@
     "client": "npm run dev --prefix client",
     "build": "npm run build --prefix client"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ALI-KHALED-13/health-tt.git"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",

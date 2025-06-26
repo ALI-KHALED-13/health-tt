@@ -16,7 +16,7 @@ const energyLevels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(val=> ({value: val + '',
 const moods = [
   {value: "upset", display: <><SmileyAngryIcon size={32} weight='fill' color={colors.lightRed}/> Upset</>},
   {value: 'down', display: <><SmileySadIcon size={32} weight='fill' color={colors.gray}/> Sad</>},
-  {value: "normal", display: <><SmileyMehIcon size={32} weight='fill' color={colors.orange}/> Noraml</>},
+  {value: "normal", display: <><SmileyMehIcon size={32} weight='fill' color={colors.orange}/> Normal</>},
   {value: 'good', display: <><SmileyIcon size={32} weight='fill' color={colors.deepGreen}/> Good</>},
   {value: "happy", display: <><SmileyWinkIcon size={32} weight='fill' color={colors.seafoamGreen}/> Happy</>},
 ];
