@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { reactLogo } from './assets/images'
 import viteLogo from '/vite.svg'
+import GlobalStyles, { colors } from './GlobalStyles'
+import { ThemeProvider } from 'styled-components'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <ThemeProvider theme={colors}>
+    <GlobalStyles/>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -27,7 +30,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+    </ThemeProvider>
   )
 }
 
